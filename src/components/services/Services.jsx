@@ -1,5 +1,19 @@
 import styled from "styled-components";
-//import { motion } from "framer-motion";
+
+const variants = {
+  intial: {
+    y: -100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 const Container = styled.div`
   height: 100%;
@@ -215,29 +229,38 @@ const Techstack = () => {
       >
         <source src="/bg2.mp4" type="video/mp4" />
       </video>
-      <Container>
-        <Title>
+      <Container variants={variants} initial="initial" animate="animate">
+        <Title variants={variants}>
           <h1>
-            <Link className="flip-animate" target="_blank">
-              <span data-hover="Techstack" style={{ userSelect: "none" }}>
+            <Link className="flip-animate" target="_blank" variants={variants}>
+              <span
+                data-hover="Techstack"
+                style={{ userSelect: "none" }}
+                variants={variants}
+              >
                 Techstack
               </span>
             </Link>
           </h1>
-          <Div>
-            <InnerDiv style={{ marginLeft: "-190px" }}>
-              <h3 style={{ paddingLeft: "180px" }}>
+          <Div variants={variants}>
+            <InnerDiv style={{ marginLeft: "-190px" }} variants={variants}>
+              <h3 style={{ paddingLeft: "180px" }} variants={variants}>
                 <Link
+                  variants={variants}
                   className="flip-animate"
                   target="_blank"
                   style={{ "&:focus": { borderColor: "#00ccff" } }}
                 >
-                  <span style={{ userSelect: "none" }} data-hover="Frontend">
+                  <span
+                    style={{ userSelect: "none" }}
+                    data-hover="Frontend"
+                    variants={variants}
+                  >
                     Frontend
                   </span>
                 </Link>
               </h3>
-              <ButtonDiv>
+              <ButtonDiv variants={variants}>
                 <button
                   style={{
                     background: "transparent",
