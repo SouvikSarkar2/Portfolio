@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     const customLoaderTimeout = setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 6000);
     return () => clearTimeout(customLoaderTimeout);
   }, []);
