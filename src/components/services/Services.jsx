@@ -208,9 +208,8 @@ const Techstack = () => {
           left: "0",
           width: "100%",
           height: "100%",
-          objectFit:
-            "cover" /* Ensures the video covers the entire container */,
-          zIndex: "-1" /* Places the video behind other elements */,
+          objectFit: "cover",
+          zIndex: "-1",
         }}
       >
         <source src="/bg2.mp4" type="video/mp4" />
@@ -218,7 +217,7 @@ const Techstack = () => {
       <Container>
         <Title>
           <h1>
-            <Link className="flip-animate" target="_blank">
+            <Link className="flip-animate">
               <span data-hover="Techstack" style={{}}>
                 Techstack
               </span>
@@ -229,7 +228,6 @@ const Techstack = () => {
               <h3 style={{ paddingLeft: "180px" }}>
                 <Link
                   className="flip-animate"
-                  target="_blank"
                   style={{ "&:focus": { borderColor: "#00ccff" } }}
                 >
                   <span data-hover="Frontend">Frontend</span>
@@ -310,11 +308,7 @@ const Techstack = () => {
             </InnerDiv>
             <InnerDiv2 style={{}}>
               <h3 style={{ paddingLeft: "90px" }}>
-                <Link
-                  style={{ paddingLeft: "90px" }}
-                  className="flip-animate"
-                  target="_blank"
-                >
+                <Link style={{ paddingLeft: "90px" }} className="flip-animate">
                   <span data-hover="Backend">Backend</span>
                 </Link>
               </h3>

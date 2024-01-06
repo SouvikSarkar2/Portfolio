@@ -37,6 +37,15 @@ const ToggleButton = ({ setOpen }) => {
             open: { d: "M 4 4.5 L 18 18.346" },
           }}
         />
+        <motion.path
+          strokeWidth="3"
+          stroke="black"
+          strokeLinecap="round"
+          variants={{
+            closed: { d: "M 3 18.346 L 21 18.346" },
+            open: { d: "M 4 4.5 L 18 18.346" },
+          }}
+        />
       </svg>
     </button>
   );
