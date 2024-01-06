@@ -2,8 +2,8 @@
 @import "../../app.scss";
 
 .div-loader {
-  background: #4281ac;
-  background: linear-gradient(to left, #005c97, #363795);
+  background-color: #083962;
+  //background: linear-gradient(to left, #005c97, #363795);
   height: 100dvh;
   width: auto;
   display: flex;
@@ -16,7 +16,7 @@
 }
 
 .water-fill {
-  animation: wave 0.5s infinite linear, fill-up 3s infinite ease-out alternate;
+  animation: wave 5s infinite linear, fill-up 2s infinite ease-out alternate;
 }
 
 @keyframes wave {

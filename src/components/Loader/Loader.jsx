@@ -6,7 +6,7 @@ const Loader = () => {
       <div className="div-loader">
         <svg
           className="loading"
-          style={{ width: "800px", padding: "20px" }}
+          style={{ width: "820px", padding: "20px" }}
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
