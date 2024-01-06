@@ -208,8 +208,9 @@ const Techstack = () => {
           left: "0",
           width: "100%",
           height: "100%",
-          objectFit: "cover",
-          zIndex: "-1",
+          objectFit:
+            "cover" /* Ensures the video covers the entire container */,
+          zIndex: "-1" /* Places the video behind other elements */,
         }}
       >
         <source src="/bg2.mp4" type="video/mp4" />
@@ -217,8 +218,8 @@ const Techstack = () => {
       <Container>
         <Title>
           <h1>
-            <Link className="flip-animate">
-              <span data-hover="Techstack" style={{}}>
+            <Link className="flip-animate" target="_blank">
+              <span data-hover="Techstack" style={{ userSelect: "none" }}>
                 Techstack
               </span>
             </Link>
@@ -228,9 +229,12 @@ const Techstack = () => {
               <h3 style={{ paddingLeft: "180px" }}>
                 <Link
                   className="flip-animate"
+                  target="_blank"
                   style={{ "&:focus": { borderColor: "#00ccff" } }}
                 >
-                  <span data-hover="Frontend">Frontend</span>
+                  <span style={{ userSelect: "none" }} data-hover="Frontend">
+                    Frontend
+                  </span>
                 </Link>
               </h3>
               <ButtonDiv>
@@ -308,8 +312,14 @@ const Techstack = () => {
             </InnerDiv>
             <InnerDiv2 style={{}}>
               <h3 style={{ paddingLeft: "90px" }}>
-                <Link style={{ paddingLeft: "90px" }} className="flip-animate">
-                  <span data-hover="Backend">Backend</span>
+                <Link
+                  style={{ paddingLeft: "90px" }}
+                  className="flip-animate"
+                  target="_blank"
+                >
+                  <span style={{ userSelect: "none" }} data-hover="Backend">
+                    Backend
+                  </span>
                 </Link>
               </h3>
               <ButtonDiv>
