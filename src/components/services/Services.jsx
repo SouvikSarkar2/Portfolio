@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 
 const Container = styled.div`
   height: 100%;
@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, white, skyblue);
+  overflow: hidden;
 `;
 
 const Title = styled.h1`
