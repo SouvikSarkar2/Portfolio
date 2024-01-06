@@ -8,6 +8,9 @@ const Container = styled.div`
   justify-content: center;
   background: linear-gradient(180deg, white, skyblue);
   overflow: hidden;
+  @media (max-width: 768px) {
+    height: 120%;
+  }
 `;
 
 const Title = styled.h1`
@@ -18,11 +21,28 @@ const Title = styled.h1`
   flex-direction: column;
   //justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 
 const InnerDiv = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+  }
+`;
+
+const InnerDiv2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: "190px";
+  @media (max-width: 768px) {
+    padding-left: 100px;
+    margin-left: -280px;
+  }
 `;
 
 const HButton = styled.a`
@@ -36,6 +56,10 @@ const HButton = styled.a`
   width: 350px;
   text-align: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
 
   span {
     display: inline-block;
@@ -92,6 +116,10 @@ const Div = styled.div`
   /* * {
     border: 1px solid red;
   } */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 150px;
+  }
 `;
 
 const Link = styled.a`
@@ -220,7 +248,7 @@ const Techstack = () => {
               </button>
             </ButtonDiv>
           </InnerDiv>
-          <InnerDiv style={{ paddingLeft: "190px" }}>
+          <InnerDiv2 style={{}}>
             <h3 style={{ paddingLeft: "90px" }}>
               <Link
                 style={{ paddingLeft: "90px" }}
@@ -289,7 +317,7 @@ const Techstack = () => {
                 </HButton>
               </button>
             </ButtonDiv>
-          </InnerDiv>
+          </InnerDiv2>
         </Div>
       </Title>
     </Container>

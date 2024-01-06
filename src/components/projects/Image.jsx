@@ -6,7 +6,7 @@ import styled from "styled-components";
 const SliderContainer = styled.div`
   width: 700px;
   height: 350px;
-
+  /* margin-top: 50px; */
   position: relative;
   overflow: hidden;
   z-index: 2;
@@ -15,7 +15,7 @@ const SliderContainer = styled.div`
     margin-left: 70px;
     margin-top: 30px;
     //height: 100px;
-    width: 380px;
+    width: 300px;
     margin-right: 80px;
   }
 `;
@@ -43,7 +43,8 @@ const SlideImage = styled.img`
 
   object-fit: cover;
   @media screen and (max-width: 768px) {
-    padding-left: 16px;
+    padding-left: 15px;
+    padding-right: 14px;
   }
 `;
 
@@ -65,11 +66,16 @@ const SliderButton = styled.button`
   border: none;
   font-family: monospace;
   font-weight: bold;
+
+  @media screen and (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 const SliderDots = styled.ul`
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 0;
   color: #fff;
   width: 100%;
@@ -77,6 +83,8 @@ const SliderDots = styled.ul`
   padding: 0;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+  }
 `;
 
 const SliderDot = styled.li`
@@ -87,6 +95,10 @@ const SliderDot = styled.li`
   margin: 10px;
   border-radius: 20px;
   transition: 0.5s;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
 
   &.active {
     width: 30px;
