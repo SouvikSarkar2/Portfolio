@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, white, skyblue);
+  //background: white;
   overflow: hidden;
   @media (max-width: 768px) {
     height: 120%;
@@ -23,7 +23,14 @@ const Title = styled.h1`
   align-items: center;
 
   @media (max-width: 768px) {
-    font-size: 40px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    h1 {
+      font-size: 40px;
+      margin-top: -180px;
+      margin-left: 10px;
+    }
   }
 `;
 
@@ -32,6 +39,14 @@ const InnerDiv = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
+    button {
+      height: 40px;
+    }
+    h3 {
+      margin-top: 10px;
+      margin-left: 20px;
+      padding-bottom: 10px;
+    }
   }
 `;
 
@@ -42,6 +57,13 @@ const InnerDiv2 = styled.div`
   @media (max-width: 768px) {
     padding-left: 100px;
     margin-left: -280px;
+    button {
+      height: 40px;
+    }
+    h3 {
+      margin-left: 15px;
+      margin-top: 20px;
+    }
   }
 `;
 
@@ -49,7 +71,7 @@ const HButton = styled.a`
   //font-family: "Roboto", sans-serif;
   font-size: 40px;
   font-weight: 500;
-  //color: black;
+  color: white;
   text-decoration: none;
   background: white;
   //padding: 40px;
@@ -58,7 +80,7 @@ const HButton = styled.a`
   position: relative;
 
   @media (max-width: 768px) {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   span {
@@ -70,6 +92,12 @@ const HButton = styled.a`
     transform: translate(0, -20px);
     text-align: center;
     padding-left: 200px;
+
+    @media screen and (max-width: 768px) {
+      img {
+        width: 30px;
+      }
+    }
   }
 
   &:before {
@@ -123,14 +151,14 @@ const Div = styled.div`
 `;
 
 const Link = styled.a`
-  color: #333;
+  color: white;
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
 
   &:hover,
   &:focus {
-    color: #222;
+    color: white;
   }
 
   &:hover span,
@@ -161,166 +189,202 @@ const Link = styled.a`
 
   &:hover span:before,
   &:focus span:before {
-    color: rgb(210, 73, 54);
+    color: #dd571c;
+
+    text-decoration: solid;
   }
 `;
 
 const Techstack = () => {
   return (
-    <Container>
-      <Title>
-        <h1>
-          <Link className="flip-animate" target="_blank">
-            <span data-hover="Techstack">Techstack</span>
-          </Link>
-        </h1>
-        <Div>
-          <InnerDiv style={{ marginLeft: "-190px" }}>
-            <h3 style={{ paddingLeft: "180px" }}>
-              <Link
-                className="flip-animate"
-                target="_blank"
-                style={{ "&:focus": { borderColor: "#00ccff" } }}
-              >
-                <span data-hover="Frontend">Frontend</span>
-              </Link>
-            </h3>
-            <ButtonDiv>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="Javascript"
-                  style={{ padding: "10px", background: "transparent" }}
+    <>
+      <video
+        autoPlay
+        muted
+        loop
+        style={{
+          position: "fixed",
+          top: "0",
+          left: "0",
+          width: "100%",
+          height: "100%",
+          objectFit:
+            "cover" /* Ensures the video covers the entire container */,
+          zIndex: "-1" /* Places the video behind other elements */,
+        }}
+      >
+        <source src="/bg2.mp4" type="video/mp4" />
+      </video>
+      <Container>
+        <Title>
+          <h1>
+            <Link className="flip-animate" target="_blank">
+              <span data-hover="Techstack" style={{}}>
+                Techstack
+              </span>
+            </Link>
+          </h1>
+          <Div>
+            <InnerDiv style={{ marginLeft: "-190px" }}>
+              <h3 style={{ paddingLeft: "180px" }}>
+                <Link
+                  className="flip-animate"
+                  target="_blank"
+                  style={{ "&:focus": { borderColor: "#00ccff" } }}
                 >
-                  <span>
-                    <img
-                      width="55"
-                      src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/javascript.svg"
-                    />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="Typescript"
-                  style={{ background: "transparent" }}
+                  <span data-hover="Frontend">Frontend</span>
+                </Link>
+              </h3>
+              <ButtonDiv>
+                <button
+                  style={{
+                    background: "transparent",
+                    border: "none",
+                    padding: "0px",
+                    margin: "0px",
+                  }}
                 >
-                  <span>
-                    <img width="55" src="/Logo/ts.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="React"
-                  style={{ background: "transparent" }}
+                  <HButton
+                    data-text="Javascript"
+                    style={{ padding: "10px", background: "transparent" }}
+                  >
+                    <span>
+                      <img
+                        width="55"
+                        src="https://raw.githubusercontent.com/gilbarbara/logos/master/logos/javascript.svg"
+                      />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Typescript"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/ts.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="React"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/react 2.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Redux"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/redux.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="ReactQuery"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/reactquery.svg" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Next"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/next.png" />
+                    </span>
+                  </HButton>
+                </button>
+              </ButtonDiv>
+            </InnerDiv>
+            <InnerDiv2 style={{}}>
+              <h3 style={{ paddingLeft: "90px" }}>
+                <Link
+                  style={{ paddingLeft: "90px" }}
+                  className="flip-animate"
+                  target="_blank"
                 >
-                  <span>
-                    <img width="55" src="/Logo/react 2.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="Redux"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/redux.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="ReactQuery"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/reactquery.svg" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton data-text="Next" style={{ background: "transparent" }}>
-                  <span>
-                    <img width="55" src="/Logo/next.png" />
-                  </span>
-                </HButton>
-              </button>
-            </ButtonDiv>
-          </InnerDiv>
-          <InnerDiv2 style={{}}>
-            <h3 style={{ paddingLeft: "90px" }}>
-              <Link
-                style={{ paddingLeft: "90px" }}
-                className="flip-animate"
-                target="_blank"
-              >
-                <span data-hover="Backend">Backend</span>
-              </Link>
-            </h3>
-            <ButtonDiv>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton data-text="Node" style={{ background: "transparent" }}>
-                  <span>
-                    <img width="55" src="/Logo/node.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="Express"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/express.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="MongoDB"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/mongo.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="MySQL"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/sql.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="Supabase"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/sb.png" />
-                  </span>
-                </HButton>
-              </button>
-              <button style={{ background: "transparent", border: "none" }}>
-                <HButton
-                  data-text="Golang"
-                  style={{ background: "transparent" }}
-                >
-                  <span>
-                    <img width="55" src="/Logo/go.png" />
-                  </span>
-                </HButton>
-              </button>
-            </ButtonDiv>
-          </InnerDiv2>
-        </Div>
-      </Title>
-    </Container>
+                  <span data-hover="Backend">Backend</span>
+                </Link>
+              </h3>
+              <ButtonDiv>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Node"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/node.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Express"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/express.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="MongoDB"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/mongo.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="MySQL"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/sql.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Supabase"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/sb.png" />
+                    </span>
+                  </HButton>
+                </button>
+                <button style={{ background: "transparent", border: "none" }}>
+                  <HButton
+                    data-text="Golang"
+                    style={{ background: "transparent" }}
+                  >
+                    <span>
+                      <img width="55" src="/Logo/go.png" />
+                    </span>
+                  </HButton>
+                </button>
+              </ButtonDiv>
+            </InnerDiv2>
+          </Div>
+        </Title>
+      </Container>
+    </>
   );
 };
 

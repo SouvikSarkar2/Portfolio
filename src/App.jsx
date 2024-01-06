@@ -21,7 +21,7 @@ const App = () => {
       <section>
         <TechStack />
       </section>
-
+      <span id="Projects" />
       <Projects />
       <section id="Contact">
         <Contact />

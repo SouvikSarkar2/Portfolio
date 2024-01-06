@@ -72,6 +72,11 @@
     height: 100%;
     position: absolute;
     z-index: 11;
+
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   /* .cloud1Mask {
@@ -91,6 +96,10 @@
     height: 100%;
     position: absolute;
     z-index: 12;
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .cloud3 {
@@ -101,6 +110,10 @@
     height: 100%;
     position: absolute;
     z-index: 13;
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .mountBg {
@@ -111,6 +124,10 @@
     height: 100%;
     position: absolute;
     z-index: 8;
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .mountFg {
@@ -121,6 +138,10 @@
     height: 100%;
     position: absolute;
     z-index: 9;
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .mountMg {
@@ -131,5 +152,9 @@
     height: 100%;
     position: absolute;
     z-index: 10;
+    @media (max-width: 768px) {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
