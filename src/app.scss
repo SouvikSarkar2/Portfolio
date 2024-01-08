@@ -28,7 +28,7 @@ html {
 body {
   background-color: #061c2f;
   color: lightgray;
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -38,6 +38,7 @@ a {
 
 section {
   height: 100vh;
+  width: 100vw;
   scroll-snap-align: center;
   overflow: hidden;
 }
