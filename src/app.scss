@@ -55,7 +55,7 @@ section {
 }
 
 @mixin desktop {
-  @media (max-width: auto) {
+  @media (max-width: 2160px) {
     @content;
   }
 }
