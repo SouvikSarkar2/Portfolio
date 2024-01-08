@@ -1,6 +1,7 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+
   //overflow: hidden;
 
   ::-webkit-scrollbar {
@@ -37,8 +38,9 @@ a {
 }
 
 section {
-  height: 100vh;
-  width: 100vw;
+  height: 100dvh;
+  //zoom: 90%;
+
   scroll-snap-align: center;
   overflow: hidden;
 }
@@ -56,7 +58,7 @@ section {
 }
 
 @mixin desktop {
-  @media (max-width: 2160px) {
+  @media (min-width: 1920px) {
     @content;
   }
 }
