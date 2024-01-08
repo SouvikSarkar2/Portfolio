@@ -44,6 +44,7 @@ const items = [
     ],
     desc: "Embark on a journey of a lifetime with WorldWise, your ultimate travel companion! This app seamlessly captures and chronicles your global adventures, from city escapades to exotic getaways. ",
     color: { bg: "#0c0c1d", logo: "", title: "grey", button: "orange" },
+    link: "https://world-wise-azure.vercel.app/",
   },
   {
     id: 4,
