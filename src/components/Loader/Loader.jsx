@@ -1,6 +1,14 @@
 import "./loader.scss";
+import React from "react";
 
 const Loader = () => {
+  const [hasMounted, setHasMounted] = React.useState(false);
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <div className="div-container">
       <div className="div-loader">

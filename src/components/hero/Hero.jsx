@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import React from "react";
 
 const textVariants = {
   initial: {
@@ -39,6 +40,13 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+  const [hasMounted, setHasMounted] = React.useState(false);
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <div className="hero">
       <div className="wrapper">
