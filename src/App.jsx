@@ -10,7 +10,11 @@ import TechStack from "./components/services/Services";
 import Loader from "./components/Loader/Loader";
 
 const App = () => {
+  const [hasMounted, setHasMounted] = useState(false);
   const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     const customLoaderTimeout = setTimeout(() => {
@@ -19,6 +23,9 @@ const App = () => {
     return () => clearTimeout(customLoaderTimeout);
   }, []);
 
+  if (!hasMounted) {
+    return null;
+  }
   return (
     <div>
       {loading ? (
